@@ -1,8 +1,10 @@
+from pathlib import Path
 from fastapi.applications import FastAPI
 import air
 
 app = air.Air()
-jinja = air.JinjaRenderer(directory="templates")
+templates_dir = Path(__file__).parent / "templates"
+jinja = air.JinjaRenderer(directory=templates_dir)
 api = FastAPI()
 
 
@@ -12,7 +14,7 @@ async def index(request: air.Request) -> None:
 
 
 @api.get("/")
-def api_root():
+async def api_root():
     return {"message": "Awesome SaaS is powered by FastAPI"}
 
 

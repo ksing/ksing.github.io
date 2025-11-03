@@ -1,4 +1,4 @@
 # ksing.github.io
 Personal github page
 
-[kush's PythonAnywhere page](http://kushs.eu.pythonanywhere.com)
+[kush's PythonAnywhere page](https://kushs.eu.pythonanywhere.com)
